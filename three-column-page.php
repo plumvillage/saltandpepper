@@ -4,17 +4,15 @@
 if ( !defined('ABSPATH')) exit;
 
 /**
- * Content/Sidebar Template
+ * Three Column Template
  *
-   Template Name:  Content/Sidebar
+   Template Name:  Content/ThreeColumn
  *
- * @file           content-sidebar-page.php
+ * @file           three-column-page.php
  * @package        Responsive 
- * @author         Emil Uzelac 
- * @copyright      2003 - 2011 ThemeID
  * @license        license.txt
  * @version        Release: 1.0
- * @filesource     wp-content/themes/responsive/content-right-page.php
+ * @filesource     wp-content/themes/saltandpepper/three-column-page.php
  * @link           http://codex.wordpress.org/Theme_Development#Pages_.28page.php.29
  * @since          available since Release 1.0
  */

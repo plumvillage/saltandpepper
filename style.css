@@ -37,10 +37,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* =Start From Here
 -------------------------------------------------------------- */
 
+/* =Adjustments to featured content area for FlexSlider
+-------------------------------------------------------------- */
+
 #featured {
     padding-bottom: 0;
 }
-
 
 
 
@@ -81,7 +83,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 @media screen and (max-width: 980px) {
 
     body {}
-	
+
     .grid, 
 	.grid-right {
 	    float: none;
