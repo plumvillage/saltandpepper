@@ -40,5 +40,5 @@ add_filter( 'comments_template', 'snp_no_page_comments', 11);
 function snp_no_page_comments( $file ) {
     if ( is_page() ) 
         $file = STYLESHEETPATH . '/no-comments-please.php';
-    return $file
+    return $file;
 }
