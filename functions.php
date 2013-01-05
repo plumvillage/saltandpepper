@@ -32,13 +32,19 @@ function snp_load_javascript_files() {
     }
 }
 
-/* 
- * Remove Comments from Pages
+/*
+ * Set the output of comments_open to false for all pages
+ * taken directly from:
+ * http://codex.wordpress.org/Function_Reference/comments_open
  */
-add_filter( 'comments_template', 'snp_no_page_comments', 11);
+add_filter( 'comments_open', 'snp_comments_open', 10, 2 );
 
-function snp_no_page_comments( $file ) {
-    if ( is_page() ) 
-        $file = STYLESHEETPATH . '/no-comments-please.php';
-    return $file;
+function snp_comments_open( $open, $post_id ) {
+
+    $post = get_post( $post_id );
+
+    if ( 'page' == $post->post_type )
+        $open = false;
+
+    return $open;
 }
