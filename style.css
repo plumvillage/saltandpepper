@@ -5,8 +5,8 @@ Description: Responsive Theme is a flexible foundation with fluid grid system th
 
 Template: responsive
 Version: 1.0.0
-Author: ThemeID 
-Author URI: http://themeid.com
+Author: PlumVillage 
+Author URI: http://plumvillage.org
 Tags: white, black, gray, light, custom-menu, custom-header, custom-background, one-column, two-columns, left-sidebar, right-sidebar, flexible-width, theme-options, threaded-comments, full-width-template, sticky-post, translation-ready, flexible-width, rtl-language-support
 
 License: GNU General Public License
@@ -30,15 +30,137 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* =Import Styles
 -------------------------------------------------------------- */
-@import url('../responsive/style.css');
 @import url('./flexslider.css');
 
 	
 /* =Start From Here
--------------------------------------------------------------- */
+
 
 /* =Adjustments to featured content area for FlexSlider
 -------------------------------------------------------------- */
+
+
+
+body {
+    font-family: 'PT Sans', sans-serif, Helvetica, Arial ;
+    font: -moz-field;
+    font-size: 0.86em;
+    text-rendering: optimizelegibility;
+    line-height: 1.8;
+    background: #f5f5dc;
+ }
+
+.wooslider {
+    border: 0;
+    margin: 0 0 20px;
+}
+
+.top-widget {
+margin-bottom: 5px;
+}
+
+.breadcrumb-list {
+font-size: 12px;
+padding: 0px 0px 0px 0px;
+}
+
+#content-archive, #content {
+    margin-top: 17px;
+    margin-bottom: 20px;
+}
+
+#widgets {
+margin-top: 25px;
+}
+
+.widget-title h3 {
+font-size: 16px;
+}
+
+.widget-wrapper {
+    padding: 18px;
+}
+
+.event .entry-title {
+    font-size: 1.8em;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    font-weight: 700;
+    line-height: 1em;
+    word-wrap: break-word;
+    color: #006699;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+}
+
+
+.single-tribe_events .tribe-events-event-image {
+width: 0;
+height: 0;
+}
+
+h2 {
+font-size: 2.250em;
+margin-bottom: 0.3em;
+margin-top: .75em;
+}
+
+h3 {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+}
+
+h4 {
+    font-size: 1.4em;
+    margin-bottom: -7px;
+    margin-top: 0em;
+}
+
+blockquote {
+    background: none repeat scroll 0% 0% rgb(245, 245, 245);
+    border-style: solid;
+    border-color: rgb(187, 187, 187);
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-width: 1px 0px;
+    color: rgb(102, 102, 102);
+    margin: 0px 0px 1.7em;
+    padding: 5px 10px 0px;
+}
+
+blockquote p {
+font-size:15px;
+}
+
+.widget-title, .widget-title-home h3 {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: -15px 0 3px;
+    padding: 0 0 0;
+    text-align: left;
+}
+
+p, hr, dl, pre, form, table, address, blockquote {
+margin: 0.6em 0;
+}
+
+li {
+font-size: 14px;
+}
+
+ul, ol {
+margin: 0 1.5em 0 0;
+list-style-type: square;
+}
 
 #featured {
     background-color: transparent;
@@ -60,12 +182,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     border-radius: 4px;
 }
 
-#featured div.wooslider {
-    border: 0;
-    margin: 0 0 20px;
+
+label {
+width: 100%;
 }
 
-
+/* Hide the author meta */
+#author-meta {
+display: none;
+}
 
 
 
@@ -84,7 +209,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     ul,  ol,  dl {
 	    page-break-before: avoid;
     }
+
+#header, .navigation {
+     display: none;
+    }
 }
+
 
 /*	Retina (HiDPI) Display
     http://www.quirksmode.org/blog/archives/2012/06/devicepixelrati.html
@@ -101,7 +231,63 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* =Responsive (Mobile) Design
 -------------------------------------------------------------- */
 @media screen and (max-width: 980px) {
+    body {}
+    .grid, 
+	.grid-right {
+	    float: none;
+    }
+	
+	#featured-image .fluid-width-video-wrapper {
+	    margin: 20px 0 0 0;
+    }
+	
+	.home #widgets {
+		margin-top: 40px;
+	}
+    
+    .top-widget,
+    .home .top-widget {
+        margin-top: 0 !important;
+    }
+    
+}
 
+/* =Center the Main Menu
+-------------------------------------------------------------- */
+@media screen and (min-width: 980px) {
+    .menu {
+        text-align:center
+    }
+    .menu a {font-size:13px;}
+    .menu li {
+        display:inline-block;
+        float:none;
+        margin-left: -5px;
+    }
+    .menu li li {
+        display:block;
+        text-align:left
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .menu {
+        text-align:center
+    }
+    .menu a {font-size: 9px; letter-spacing: 0.07px}
+    .menu li {
+        display:inline-block;
+        float:none;
+        margin-left: -5px;
+    }
+    .menu li li {
+        display:block;
+        text-align:left
+    }
+}
+
+
+@media screen and (max-width: 768px) {
     body {}
 
     .grid, 
@@ -124,88 +310,62 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     
 }
 
-@media screen and (max-width: 650px) {
 
-    body {}
-
-    #logo {
-	    float: none;
-        margin: 0;
-	    text-align: center;
+@media screen and (min-width: 768px) {
+    .menu {
+        text-align:center
     }
+    .menu a {font-size: 11px; letter-spacing: 0.4px}
+    .menu li {
+        display:inline-block;
+        float:none;
+        margin-left: -5px;
+    }
+    .menu li li {
+        display:block;
+        text-align:left
+    }
+}
 
+
+@media screen and (max-width: 650px) {
+body {}
     .grid, 
 	.grid-right {
 	    float: none;
     }
-
+	
 	#featured-image .fluid-width-video-wrapper {
 	    margin: 20px 0 0 0;
     }
+	
+	.home #widgets {
+		margin-top: 40px;
+	}
     
-    .top-widget {
-        float: none;
-        margin: 0 auto 10px auto;
-        position: relative;
-        text-align: center;
-        width: auto;
-    }
-    
-    .top-widget .widget-title {
-        text-align: center;
-    }
-	
-    .js .menu,
-	.js .sub-header-menu {
-		display: none;
-	}
-	
-	.top-menu, 
-	.footer-menu li {
-	    float: none;
-        font-size: 11px;
-	    text-align: center;
-    }
-	
-	.tinynav { 
-	    display: block;
-		margin: 0 auto;
-		width: 100%;
-	}
-	
-	.tinynav {
-		-moz-appearance: none !important;
-		-webkit-appearance: none !important;
-		appearance: none !important;
-		background: #fff url(images/bg-select.png) no-repeat right;
-		border: 1px solid #ccc;
-        font-size: 12px;
-		overflow: hidden;
-		padding: 0.5em 1em 0.5em 0.75em;
-	}
-	
-	.ie7 .tinynav,
-	.ie8 .tinynav {
-		padding-right: 10px;
-	}
-	
-	.ie9 .tinynav  {
-		padding-right: 8px;
-	}
-	
-    #author-meta {
-        padding: 20px;
+    .top-widget,
+    .home .top-widget {
+        margin-top: 0 !important;
     }
     
-    #footer {
-	    text-align: center;
-    }
+}
 
-    #footer .social-icons {
-        padding-bottom: 10px;
-	    text-align: center;
+@media screen and (min-width: 980px) {
+    .menu {
+        text-align:center
+    }
+    .menu a {font-size: 13px; letter-spacing: 0.4px}
+    .menu li {
+        display:inline-block;
+        float:none;
+        margin-left: -5px;
+    }
+    .menu li li {
+        display:block;
+        text-align:left
     }
 }
+
 
 @media screen and (max-width: 480px) {
 
@@ -235,7 +395,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         text-align: center;
     }
 	
-    .menu ul, 
+        .menu ul, 
 	.menu li, 
 	.top-menu, 
 	.footer-menu li, 

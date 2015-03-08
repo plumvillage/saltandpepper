@@ -24,7 +24,6 @@ if ( !defined('ABSPATH')) exit;
 <?php get_header(); ?>
 
         <div id="featured" class="grid col-940">
-            
             <?php $options = get_option('responsive_theme_options');
 			// First let's check if content is in place
 			    if (!empty($options['home_content_area'])) {
