@@ -8,29 +8,29 @@ if ( !defined('ABSPATH')) exit;
  *
    Template Name:  LH Registration
  * @file           lh-registration.php
- * @package        SaltandPepper 
- * @author         Phap Tu 
+ * @package        SaltandPepper
+ * @author         Phap Tu
  * @copyright      2003 - 2013 Planyo
- * @license        
+ * @license
  * @version        Release: 1.0
  * @filesource     wp-content/themes/saltandpepper/lh-registration.php
- 
+
  */
 
 get_header(); ?>
-        
+
 	<?php if (have_posts()) : ?>
 
 		<?php while (have_posts()) : the_post(); ?>
-        
+
         <?php get_template_part( 'loop-header' ); ?>
-        
+
 			<?php responsive_entry_before(); ?>
-			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>       
+			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php responsive_entry_top(); ?>
 
                 <?php get_template_part( 'post-meta-page' ); ?>
-                
+
                 <div class="post-entry">
 
 <div id="content-full" class="grid col-940">
@@ -70,38 +70,38 @@ else {
   document.write("<sc"+"ript src='"+get_full_planyo_file_path("utils.js")+"' type='text/javascript'></sc"+"ript>");
   document.write("<sc"+"ript src='"+get_full_planyo_file_path("planyo-reservations.js")+"' type='text/javascript'></sc"+"ript>");
 }
-document.write("<li"+"nk rel='stylesheet' href='http://static.planyo.com/schemes/?site_id="+window.planyo_site_id+"' type='text/css' />");
+document.write("<li"+"nk rel='stylesheet' href='https://static.planyo.com/schemes/?site_id="+window.planyo_site_id+"' type='text/css' />");
 
 </script>
-<noscript><a href='http://www.planyo.com/about-calendar.php?calendar=12498'>Make a reservation</a><br/><br/><a href='http://www.planyo.com/'>Reservation system powered by Planyo</a></noscript>
+<noscript><a href='https://www.planyo.com/about-calendar.php?calendar=12498'>Make a reservation</a><br/><br/><a href='https://www.planyo.com/'>Reservation system powered by Planyo</a></noscript>
 <br />
 
                     <?php the_content(__('Read more &#8250;', 'responsive')); ?>
                     <?php wp_link_pages(array('before' => '<div class="pagination">' . __('Pages:', 'responsive'), 'after' => '</div>')); ?>
                 </div><!-- end of .post-entry -->
-            
+
 				<?php get_template_part( 'post-data' ); ?>
-				               
-				<?php responsive_entry_bottom(); ?>      
-			</div><!-- end of #post-<?php the_ID(); ?> -->       
+
+				<?php responsive_entry_bottom(); ?>
+			</div><!-- end of #post-<?php the_ID(); ?> -->
 			<?php responsive_entry_after(); ?>
-            
+
 			<?php responsive_comments_before(); ?>
 			<?php comments_template( '', true ); ?>
 			<?php responsive_comments_after(); ?>
-            
-        <?php 
-		endwhile; 
 
-		get_template_part( 'loop-nav' ); 
+        <?php
+		endwhile;
 
-	else : 
+		get_template_part( 'loop-nav' );
 
-		get_template_part( 'loop-no-posts' ); 
+	else :
 
-	endif; 
-	?>  
-      
+		get_template_part( 'loop-no-posts' );
+
+	endif;
+	?>
+
 </div><!-- end of #content-full -->
 
 <?php get_footer(); ?>

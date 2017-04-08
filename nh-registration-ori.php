@@ -71,10 +71,10 @@ else {
   document.write("<sc"+"ript src='"+get_full_planyo_file_path("utils.js")+"' type='text/javascript'></sc"+"ript>");
   document.write("<sc"+"ript src='"+get_full_planyo_file_path("planyo-reservations.js")+"' type='text/javascript'></sc"+"ript>");
 }
-document.write("<li"+"nk rel='stylesheet' href='http://static.planyo.com/schemes/?site_id="+window.planyo_site_id+"' type='text/css' />");
+document.write("<li"+"nk rel='stylesheet' href='https://static.planyo.com/schemes/?site_id="+window.planyo_site_id+"' type='text/css' />");
 
 </script>
-<noscript><a href='http://www.planyo.com/about-calendar.php?calendar=9813'>Make a reservation</a><br/><br/><a href='http://www.planyo.com/'>Reservation system powered by Planyo</a></noscript>
+<noscript><a href='https://www.planyo.com/about-calendar.php?calendar=9813'>Make a reservation</a><br/><br/><a href='https://www.planyo.com/'>Reservation system powered by Planyo</a></noscript>
 <br />
 
                     <?php the_content(__('Read more &#8250;', 'responsive')); ?>
