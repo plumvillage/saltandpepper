@@ -10,6 +10,15 @@
 
 add_action( "wp_enqueue_scripts", 'snp_load_javascript_files' );
 
+add_filter( 'auto_update_plugin', '__return_true' );
+add_filter( 'allow_minor_auto_core_updates', '__return_true' );
+
+
+// makes it easy to limit the length of an excerpt
+function excerpt($limit) {
+    return wp_trim_words(get_the_excerpt(), $limit);
+}
+
 function snp_load_javascript_files() {
     wp_register_script(
         'jquery.flexslider',
@@ -32,7 +41,38 @@ function snp_load_javascript_files() {
     if ( is_front_page() ) {
         wp_enqueue_script( 'snp.frontpage' );
     }
+
+	wp_enqueue_script( 'imagesloaded', get_stylesheet_directory_uri() . '/js/imagesloaded.pkgd.min.js', array('jquery') );
+	wp_enqueue_script( 'isotope', get_stylesheet_directory_uri() . '/js/isotope.pkgd.min.js', array('jquery') );
+	wp_enqueue_script( 'magic', get_stylesheet_directory_uri() . '/js/magic.js', array('jquery') );
+
 }
+
+register_sidebar( array(
+					  'name'          => __( 'Thich Nhat Hanh Page 1', 'responsive' ),
+					  'id'            => 'thich-nhat-hanh-page-1',
+					  'before_title'  => '<div id="widget-title-one" class="widget-title-home"><h3>',
+					  'after_title'   => '</h3></div>',
+					  'before_widget' => '<div id="%1$s" class="widget-wrapper %2$s">',
+					  'after_widget'  => '</div>'
+				  ) );
+register_sidebar( array(
+					  'name'          => __( 'Thich Nhat Hanh Page 2', 'responsive' ),
+					  'id'            => 'thich-nhat-hanh-page-2',
+					  'before_title'  => '<div id="widget-title-one" class="widget-title-home"><h3>',
+					  'after_title'   => '</h3></div>',
+					  'before_widget' => '<div id="%1$s" class="widget-wrapper %2$s">',
+					  'after_widget'  => '</div>'
+				  ) );
+register_sidebar( array(
+					  'name'          => __( 'Thich Nhat Hanh Page 3', 'responsive' ),
+					  'id'            => 'thich-nhat-hanh-page-3',
+					  'before_title'  => '<div id="widget-title-one" class="widget-title-home"><h3>',
+					  'after_title'   => '</h3></div>',
+					  'before_widget' => '<div id="%1$s" class="widget-wrapper %2$s">',
+					  'after_widget'  => '</div>'
+				  ) );
+
 
 /*
  * Set the output of comments_open to false for all pages
@@ -123,4 +163,7 @@ ob_end_clean();
 return $html;
 }
 add_filter('widget_text','php_execute',100);
+
+// Prevent Wordpress from redirecting to port 80 when accessing backend directly
+remove_filter('template_redirect','redirect_canonical');
 ?>

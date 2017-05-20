@@ -56,7 +56,7 @@ body {
 }
 
 .top-widget {
-margin-bottom: 5px;
+margin-bottom: 50px;
 }
 
 .breadcrumb-list {
@@ -69,16 +69,46 @@ padding: 0px 0px 0px 0px;
     margin-bottom: 20px;
 }
 
+#page { margin-top:5px; margin-right: 5px; 
+	margin-bottom: 50px; margin-left:5px; }
+
 #widgets {
 margin-top: 25px;
 }
 
+#widgets .ytc_thumb.ar16_9, .ytc_thumb.ar16_9>span, .ytc_thumb.ar16_9>span:before{
+	padding-bottom: 56.26%; 
+}
+.youtube_channel.responsive .ytc_video_container{
+	margin-bottom: 10px;
+}
+h3.ytc_title{
+	margin-top: 0;
+}
 .widget-title h3 {
 font-size: 16px;
 }
 
-.widget-wrapper {
-    padding: 18px;
+.widget {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	background-color: #f9f9f9;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+	margin: 0 0 20px;
+	padding: 20px;
+}
+
+.widget select,
+.widget input[type="text"],
+.widget input[type="password"],
+.widget  input[type="email"] {
+	width: 75%;
+}
+
+.widget-wrapper, .widget {
+    padding: 12px 18px;
+    
 }
 
 .event .entry-title {
@@ -144,9 +174,13 @@ font-size:15px;
     display: block;
     font-size: 16px;
     font-weight: 600;
-    margin: -15px 0 3px;
+    margin: 0 0 3px;
     padding: 0 0 0;
     text-align: left;
+}
+.textwidget img, .textwidget img.alignnone, .textwidget a img.alignnone{
+	padding: 0 0 5px;
+	margin:0;
 }
 
 p, hr, dl, pre, form, table, address, blockquote {
@@ -166,14 +200,15 @@ list-style-type: square;
     background-color: transparent;
     border: none;
     padding-bottom: 0;
+    margin-top:20px;
 }
 
-#featured p, #featured div.slide-content {
+.wooslider p, .wooslider div.slide-content {
     padding: 0;
     margin: 0;
 }
 
-#featured img {
+.wooslider img {
     padding: 0;
     margin: 0;
     -webkit-border-radius: 4px;
@@ -184,15 +219,143 @@ list-style-type: square;
 
 
 label {
-width: 100%;
+    width: 100%;
+}
+label.screen-reader-text{
+    width: inherit;
 }
 
 /* Hide the author meta */
 #author-meta {
-display: none;
+    display: none;
 }
 
+/* Fix the facebook albums layout */
 
+.jfbalbum{
+	margin-top: 10px;
+}
+
+.cleanprint-exclude{
+	float: right;
+}
+
+/* Event page */
+
+.type-event .em-location-map-container-include{
+	display:none;
+}
+.type-event.show-map .em-location-map-container-include{
+	display: block;
+}
+
+/* Like Home */
+
+.like-home{
+	margin-top: -20px;
+}
+
+.like-home #widgets{
+	margin-top: 50px;
+}
+
+.like-home .cleanprint-exclude, .like-home .really_simple_share, .like-home .yarpp-related{
+	display: none;
+}
+.like-home .show-share .really_simple_share{
+	display: block;
+}
+.page-template-front-page-simple .really_simple_share, .really_simple_share{
+	padding-top: 30px!important;
+}
+
+/* TubePress */
+fieldset.tubepress_search{
+	border:none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Books pages */
+
+.isotope-container{
+	margin-top: 15px;
+	position: relative;
+}
+.isotope-container .pv_book{
+	width: 18.4%;
+	margin-bottom: 20px;
+}
+.gutter-sizer{
+	width: 2%;
+}
+.isotope-container .pv_book h1{
+	font-size: 130%;
+	line-height: 135%;
+}
+
+.isotope-container .pv_book h2{
+	margin-top: 0px;
+	margin-bottom: 8px;
+	font-size: 100%;
+	line-height: 135%;
+}
+
+.isotope-container .pv_book .post-entry{
+	line-height: 135%;
+}
+
+.filter-isotope{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.filter-isotope li{
+	display: inline-block;
+}
+.filter-isotope li a{
+	font-weight: bold;
+}
+.filter-isotope li a.active{
+	color: #000;
+}
+.single-pv_book img.wp-post-image{
+	margin: 0;
+}
+.single-pv_book .breadcrumb-list{
+	margin-bottom: 15px;
+}
+
+.single-pv_book dl dd {
+  display: inline;
+  margin: 0;
+}
+.single-pv_book dl dd:after{
+  display: block;
+  content: '';
+}
+.single-pv_book dl dt{
+  display: inline-block;
+  margin: 0;
+}
+
+.post-subtitle{
+	font-size: 130%;
+	margin-top: 0;
+	margin-bottom: .75em;
+}
+
+.yuzo_related_post .yuzo_wraps{
+	margin-top: 10px;
+}
+
+.yuzo_related_post .yuzo-img{
+	background-position: left 50%!important;
+}
+
+#goodreviews-div #the_iframe{
+	max-width: 100%;
+}
 
 /* =Media Print
 -------------------------------------------------------------- */
@@ -308,6 +471,11 @@ display: none;
         margin-top: 0 !important;
     }
     
+    .isotope-container .pv_book{
+		width: 23.5%;
+		margin-bottom: 20px;
+	}
+    
 }
 
 
@@ -347,6 +515,12 @@ body {}
     .home .top-widget {
         margin-top: 0 !important;
     }
+    
+    .isotope-container .pv_book{
+		width: 32%;
+		margin-bottom: 20px;
+	}
+
     
 }
 
@@ -412,6 +586,11 @@ body {}
     #footer .social-icons {
 	    text-align: center;
     }
+    
+    .isotope-container .pv_book{
+		width: 49%;
+		margin-bottom: 20px;
+	}
 }
 
 @media screen and (max-width: 320px) {
@@ -435,6 +614,15 @@ body {}
 	    font-size: 14px;
 	    padding: 7px 17px;
     }
+    
+    .isotope-container .pv_book{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.gutter-sizer{
+		width: 0;
+	}
+
 }
 
 @media screen and (max-width: 240px) {
@@ -475,5 +663,24 @@ body {}
         text-align: center;
     }
 }
+/* Do not allow the planyo search field to appear*/
+form#search_form {
+    display: none !important;
+}
+
+li#row_start_date {
+   display: none !important;
+}
+
+li#row_end_date {
+   display: none !important;
+}
+.page-id-10274 span.freeform_contents {display: none !important}
+
+/* Hide the disclosure text from constant contact form */
+.ctct-disclosure {
+    display: none ! important;
+}
+
 
 /*The last 29 days of the month are the hardest."- Nikola Tesla*/
