@@ -1,18 +1,18 @@
-/* 
-Theme Name: Plum Village Salt and Pepper 
-Theme URI: http://github.com/plumvillage/saltandpepper 
+/*
+Theme Name: Plum Village Salt and Pepper
+Theme URI: http://github.com/plumvillage/saltandpepper
 Description: Responsive Theme is a flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment. Theme features 9 Page Templates, 11 Widget Areas, 6 Template Layouts, 4 Menu Positions and more. Powerful but simple Theme Options for full CMS control with easy Logo Upload, Social Networking and Webmaster Tools etc. Responsive is WooCommerce Compatible, Multilingual Ready (WPML), RTL-Language Support, Retina-Ready, W3C Markup Validated and currently translated into 34 languages. Cross-Browser compatible and yes even the IE7. No paid memberships or clubs to get a FREE/Responsive Support you need. http://themeid.com/support
 
 Template: responsive
 Version: 1.0.0
-Author: PlumVillage 
+Author: PlumVillage
 Author URI: http://plumvillage.org
 Tags: white, black, gray, light, custom-menu, custom-header, custom-background, one-column, two-columns, left-sidebar, right-sidebar, flexible-width, theme-options, threaded-comments, full-width-template, sticky-post, translation-ready, flexible-width, rtl-language-support
 
 License: GNU General Public License
-License URI: license.txt 
+License URI: license.txt
 
-Responsive WordPress Theme, Copyright (C) 2003-2012 Emil Uzelac 
+Responsive WordPress Theme, Copyright (C) 2003-2012 Emil Uzelac
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -------------------------------------------------------------- */
 @import url('./flexslider.css');
 
-	
+
 /* =Start From Here
 
 
@@ -69,7 +69,7 @@ padding: 0px 0px 0px 0px;
     margin-bottom: 20px;
 }
 
-#page { margin-top:5px; margin-right: 5px; 
+#page { margin-top:5px; margin-right: 5px;
 	margin-bottom: 50px; margin-left:5px; }
 
 #widgets {
@@ -77,7 +77,7 @@ margin-top: 25px;
 }
 
 #widgets .ytc_thumb.ar16_9, .ytc_thumb.ar16_9>span, .ytc_thumb.ar16_9>span:before{
-	padding-bottom: 56.26%; 
+	padding-bottom: 56.26%;
 }
 .youtube_channel.responsive .ytc_video_container{
 	margin-bottom: 10px;
@@ -108,7 +108,7 @@ font-size: 16px;
 
 .widget-wrapper, .widget {
     padding: 12px 18px;
-    
+
 }
 
 .event .entry-title {
@@ -276,7 +276,7 @@ fieldset.tubepress_search{
 	margin: 0;
 }
 
-/* Books pages */
+/* =Books pages */
 
 .isotope-container{
 	margin-top: 15px;
@@ -313,11 +313,22 @@ fieldset.tubepress_search{
 .filter-isotope li{
 	display: inline-block;
 }
-.filter-isotope li a{
-	font-weight: bold;
+.filter-isotope li:first-child {
+	min-width: 4em;
 }
-.filter-isotope li a.active{
-	color: #000;
+.filter-isotope li a {
+	background-color: #cbe9ff;
+	border-radius: 5em;
+	color: black;
+	display: inline-block;
+	font-size: 1em;
+	line-height: 1;
+	padding: 0.4em 1.2em;
+	margin: .25em;
+}
+.filter-isotope li a.active {
+	color: #06c;
+	font-weight: bold;
 }
 .single-pv_book img.wp-post-image{
 	margin: 0;
@@ -382,12 +393,12 @@ fieldset.tubepress_search{
 /*	Retina (HiDPI) Display
     http://www.quirksmode.org/blog/archives/2012/06/devicepixelrati.html
 -------------------------------------------------------------- */
-@media 
-    only screen and (-moz-min-device-pixel-ratio:1.5), 
-    only screen and (-o-min-device-pixel-ratio:3/2), 
-    only screen and (-webkit-min-device-pixel-ratio:1.5), 
+@media
+    only screen and (-moz-min-device-pixel-ratio:1.5),
+    only screen and (-o-min-device-pixel-ratio:3/2),
+    only screen and (-webkit-min-device-pixel-ratio:1.5),
     only screen and (min-device-pixel-ratio:1.5) {
-    
+
     body {}
 }
 
@@ -395,24 +406,24 @@ fieldset.tubepress_search{
 -------------------------------------------------------------- */
 @media screen and (max-width: 980px) {
     body {}
-    .grid, 
+    .grid,
 	.grid-right {
 	    float: none;
     }
-	
+
 	#featured-image .fluid-width-video-wrapper {
 	    margin: 20px 0 0 0;
     }
-	
+
 	.home #widgets {
 		margin-top: 40px;
 	}
-    
+
     .top-widget,
     .home .top-widget {
         margin-top: 0 !important;
     }
-    
+
 }
 
 /* =Center the Main Menu
@@ -453,29 +464,29 @@ fieldset.tubepress_search{
 @media screen and (max-width: 768px) {
     body {}
 
-    .grid, 
+    .grid,
 	.grid-right {
 	    float: none;
     }
-	
+
 	#featured-image .fluid-width-video-wrapper {
 	    margin: 20px 0 0 0;
     }
-	
+
 	.home #widgets {
 		margin-top: 40px;
 	}
-    
+
     .top-widget,
     .home .top-widget {
         margin-top: 0 !important;
     }
-    
+
     .isotope-container .pv_book{
 		width: 23.5%;
 		margin-bottom: 20px;
 	}
-    
+
 }
 
 
@@ -498,30 +509,30 @@ fieldset.tubepress_search{
 
 @media screen and (max-width: 650px) {
 body {}
-    .grid, 
+    .grid,
 	.grid-right {
 	    float: none;
     }
-	
+
 	#featured-image .fluid-width-video-wrapper {
 	    margin: 20px 0 0 0;
     }
-	
+
 	.home #widgets {
 		margin-top: 40px;
 	}
-    
+
     .top-widget,
     .home .top-widget {
         margin-top: 0 !important;
     }
-    
+
     .isotope-container .pv_book{
 		width: 32%;
 		margin-bottom: 20px;
 	}
 
-    
+
 }
 
 @media screen and (min-width: 980px) {
@@ -550,35 +561,35 @@ body {}
 	    text-align: center;
     }
 
-    .grid, 
+    .grid,
 	.grid-right {
 	    float: none;
     }
-	
+
 	#featured-image .fluid-width-video-wrapper {
 	    margin: 20px 0 0 0;
 	}
-	
+
 	.featured-title {
 	    font-size: 40px;
 	    padding: 40px 20px 0 20px
     }
-    
+
     .navigation .next,
     .navigation .previous {
         text-align: center;
     }
-	
-        .menu ul, 
-	.menu li, 
-	.top-menu, 
-	.footer-menu li, 
+
+        .menu ul,
+	.menu li,
+	.top-menu,
+	.footer-menu li,
 	.sub-header-menu li {
 	    float: none;
 	    text-align: center;
         text-rendering: optimizeSpeed;
     }
-	
+
     #footer {
 	    text-align: center;
     }
@@ -586,7 +597,7 @@ body {}
     #footer .social-icons {
 	    text-align: center;
     }
-    
+
     .isotope-container .pv_book{
 		width: 49%;
 		margin-bottom: 20px;
@@ -594,9 +605,9 @@ body {}
 }
 
 @media screen and (max-width: 320px) {
-    
+
     body {}
-	
+
 	#featured p {
 	    font-size: 12px;
 		line-height: 1.2em;
@@ -605,7 +616,7 @@ body {}
     .featured-title {
 	    font-size: 35px;
     }
-	
+
 	.featured-subtitle {
 		font-size: 15px;
 	}
@@ -614,7 +625,7 @@ body {}
 	    font-size: 14px;
 	    padding: 7px 17px;
     }
-    
+
     .isotope-container .pv_book{
 		width: 100%;
 		margin-bottom: 20px;
@@ -626,9 +637,9 @@ body {}
 }
 
 @media screen and (max-width: 240px) {
-    
+
     body {}
-	
+
 	#featured p {
 	    font-size: 11px;
 		line-height: 1.1em;
@@ -637,7 +648,7 @@ body {}
     .featured-title {
 	    font-size: 20px;
     }
-	
+
 	.featured-subtitle {
 		font-size: 11px;
 	}
@@ -646,15 +657,15 @@ body {}
 	    font-size: 12px;
 	    padding: 5px 15px;
     }
-    
+
     .top-widget area,
     .top-widget select,
     .top-widget textarea,
-    .top-widget input[type="text"], 
+    .top-widget input[type="text"],
     .top-widget input[type="password"] {
         width: 75%;
     }
-    
+
     .widget-title,
     .widget-title-home h3 {
         font-size: 14px;
