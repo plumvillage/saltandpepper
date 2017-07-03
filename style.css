@@ -117,6 +117,21 @@ label {
   width: 100%;
 }
 
+input[type="number"] {
+  box-shadow: 0 1px 0 #ffffff, inset 0 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid #aaaaaa;
+  border-bottom-color: #cccccc;
+  border-radius: 2px;
+  cursor: text;
+  margin: 0;
+  outline: none;
+  padding: 6px 8px;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
 label.screen-reader-text {
   width: inherit;
 }
@@ -740,7 +755,12 @@ li#row_end_date {
   padding-left: 1.5em;
 }
 
-.donation-box h2,
+.donation-box .donation-form,
+.donation-form fieldset:first-child,
+.donation-form fieldset:first-child legend {
+  margin-top: 0;
+}
+
 .donation-form legend {
   font-size: 1.15em;
   font-weight: 700;
@@ -755,6 +775,15 @@ li#row_end_date {
   padding: 0;
 }
 
+.donation-form .error-messages {
+  background-color: rgba(241, 241, 241, 0.3);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-left: 4px solid #a94442;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+  list-style-type: disc;
+  padding: 12px 12px 12px 32px;
+}
+
 .donation-form .form-row::after {
   content: "";
   display: block;
@@ -767,40 +796,36 @@ li#row_end_date {
   width: 100%;
 }
 
-/*.donation-form .label-amount {
+.donation-form .label-amount {
   display: none;
-}*/
+}
 
 .donation-form .currency-symbol {
+  /* to look like salt & pepper form field */
+  box-shadow: 0 1px 0 #ffffff, inset 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  border: 1px solid #aaaaaa;
+  border-bottom-color: #cccccc;
+  border-radius: 2px 0 0 2px;
+  margin: 0;
+  outline: none;
+  vertical-align: middle;
+  max-width: 100%;
+
+  /*currency styling */
   background-color: #f2f2f2;
-  border: 1px solid #ccc;
   border-right: none;
   color: #333;
-  margin: 0;
-  padding: 0 12px;
-  height: 35px;
-  line-height: 35px;
-  font-size: 18px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  width: 30px;
 }
 
 .donation-form #field-amount {
-  border: 1px solid #ccc;
-  background: #FFF;
-  border-radius: 0;
-  height: 35px;
-  line-height: 35px;
-  padding: 0 12px;
-  margin: 0;
-  font-size: 18px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  min-width: 125px;
-  float: left;
+  border-left: 1px solid #ccc;
+  border-radius: 0 2px 2px 0;
+  width: 30%;
 }
 
 .donation-form #field-notes {
