@@ -364,6 +364,18 @@ fieldset.tubepress_search{
 	background-position: left 50%!important;
 }
 
+/* ------ registration ----------- */
+
+#rental_prop_agreement_agr textarea{
+    min-height: 310px;
+}
+
+#planyo_price_holder{
+    bottom: 0!important;
+    padding: 0 20px 20px;
+    z-index: 999;
+}
+
 #goodreviews-div #the_iframe{
 	max-width: 100%;
 }
