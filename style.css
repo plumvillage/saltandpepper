@@ -40,8 +40,10 @@ body {
   font-size: 0.86em;
   text-rendering: optimizelegibility;
   line-height: 1.8;
-  background: #f5f5dc;
+  background: #F5B25D;
 }
+
+/* =police */
 
 h1 {
   font-size: 2.625em;
@@ -136,6 +138,95 @@ label.screen-reader-text {
   width: inherit;
 }
 
+/* =header */
+
+@media screen and (min-width: 980px){
+	body.full-width-layout #header #content-outer,
+	body.default-layout #header #content-outer,
+	body.full-width-no-box #header #content-outer {
+		margin: 0 0 0 10%;
+		max-width: none;
+	}
+
+	.top-menu {
+		margin: 10px 10% 10px 0;
+	}
+
+	.top-widget {
+		margin-right: 10%;
+		width : 300px;
+	}
+}
+
+
+/* =Main menu */
+
+.main-nav {
+    background-color: rgba(0, 0, 0, 0)!important;
+    background-image: none;
+	padding-top: 20px;
+}
+
+.menu {
+    background-color: rgba(0, 0, 0, 0)!important;
+    background-image: none;
+}
+
+.menu a {
+	border-left: none;
+    color: #613F35;
+	text-shadow: none;
+	padding: 0 1.2em;
+}
+
+@media screen and (min-width: 980px){
+	.menu a {
+		font-size: 17px!important;
+		letter-spacing: .9px!important;
+	}
+}
+
+@media screen and (max-width: 979px){
+	.menu a {
+		font-size: 15px!important;
+		letter-spacing: .5px!important;
+	}
+}
+
+.menu .current_page_item a,
+.menu .current-menu-item a {
+    background-color: #613F35;
+	color: #F5B25D!important;
+}
+
+/* =image slider */
+
+body.home #wrapper {
+    margin: 0 auto 0 auto;
+	padding: 0;
+	-moz-border-radius: 0;
+    -webkit-border-radius: 0;
+	border-radius: 0;
+	border: none!important;
+}
+
+#featured {
+    margin-top: 0px!important;
+	-moz-border-radius: 0!important;
+    -webkit-border-radius: 0!important;
+	border-radius: 0!important;
+    border: none!important;
+	width: 100%!important;
+}
+
+.wooslider {
+    border: none!important;
+    -webkit-border-radius: 0!important;
+    -moz-border-radius: 0!important;
+    -o-border-radius: 0!important;
+    border-radius: 0!important;
+}
+
 /* =page elements */
 
 #page {
@@ -145,10 +236,26 @@ label.screen-reader-text {
   margin-left: 5px;
 }
 
+#container{
+	max-width: none;
+    padding: 0 0;
+}
+
 #content-archive,
 #content {
   margin-top: 17px;
   margin-bottom: 20px;
+}
+
+#wrapper {
+    margin: 0 auto 20px auto;
+}
+
+body.full-width-layout #wrapper #content-outer,
+body.default-layout #wrapper #content-outer,
+body.full-width-no-box #wrapper #content-outer {
+	margin: 0 10% 0 10%;
+	max-width: none;
 }
 
 #widgets {
@@ -159,6 +266,7 @@ label.screen-reader-text {
   font-size: 12px;
   padding: 0px 0px 0px 0px;
 }
+
 
 /* =widgets */
 
