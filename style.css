@@ -270,12 +270,11 @@ body.full-width-no-box #wrapper #content-outer {
 
 /* =widgets */
 
-.widget {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  background-color: #f9f9f9;
-  border: 1px solid #e5e5e5;
-  border-radius: 4px;
+.widget-wrapper {
+  border-radius: 3px;
+  box-shadow: rgba(0,0,0,.05) 0 1px 5px;
+  background-color: transparent;
+  border: none;
   margin: 0 0 20px;
   padding: 20px;
 }
@@ -317,6 +316,14 @@ body.full-width-no-box #wrapper #content-outer {
   padding: 12px 18px;
 }
 
+/* = footer */
+#footer .widget-wrapper {
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	float: left;
+}
+
 /* =home */
 
 #featured {
@@ -347,10 +354,11 @@ body.full-width-no-box #wrapper #content-outer {
   border-radius: 4px;
 }
 
-.home .widget-wrapper {
-    min-height: 248px;
+@media screen and (min-width: 980px){
+	.home #container .widget-wrapper {
+	    min-height: 280px;
+	}
 }
-
 
 /* Hide the author meta */
 
@@ -863,6 +871,14 @@ li#row_end_date {
     bottom: 0!important;
     padding: 0 20px 20px;
     z-index: 999;
+}
+
+
+/* = youmax */
+.youmax,
+#youmax-video-list-div {
+	background-color: transparent !important;
+	border: none !important;
 }
 
 /*The last 29 days of the month are the hardest."- Nikola Tesla*/
