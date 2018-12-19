@@ -28,15 +28,6 @@ function snp_load_javascript_files() {
         true
     );
 
-    wp_register_script(
-        'snp.frontpage',
-        get_stylesheet_directory_uri() . '/js/saltandpepper.frontpage.js',
-        array('jquery', 'jquery.flexslider'),
-        '',
-        true
-    );
-
-
     wp_enqueue_script( 'jquery.flexslider' );
     if ( is_front_page() ) {
         wp_enqueue_script( 'snp.frontpage' );
@@ -138,17 +129,17 @@ add_filter('s2_unsubscribe_confirmed', 'unsubscribe_change');
 add_filter('wp_title', 'filter_events_title');
 // Runs the Page title element through our custom filter
 add_filter('tribe_get_events_title', 'filter_events_title');
- 
+
 // Tribe events: Manually set title for each page
 function filter_events_title ($title) {
- 
+
 	if ( tribe_is_upcoming() && !is_tax() ) { // List View Page: Upcoming Events
 		$title = 'List view: Upcoming events with lay sanghas across Europe';
 	}
 	elseif ( tribe_is_upcoming() && is_tax() ) { // List View Category Page: Upcoming Events
 		$title = 'List view Category: Upcoming events with lay sanghas across Europe';
 	}
-	
+
 	return $title;
 } */
 

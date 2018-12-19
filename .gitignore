@@ -1,0 +1,7 @@
+.DS_Store
+
+# WPE Deploy
+# https://github.com/UnblockDotNet/wpe-deploy
+# Ignore config for now as it will keep changing until new staging model and
+# multiple sites are supported.
+wpedeploy.json
