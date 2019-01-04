@@ -178,6 +178,26 @@ label.screen-reader-text {
 	padding: 0 1.2em;
 }
 
+.menu .menu-item-has-children::after {
+	color: #613F35;
+	right: 8px;
+	top: 10px;
+}
+
+.menu .menu-item-has-children:hover > a,
+.menu .menu-item-has-children:hover::after {
+	color: #fff;
+}
+
+
+ul.menu > li:hover {
+	background-color: transparent;
+}
+
+.menu a:hover {
+	background: transparent none;
+}
+
 @media screen and (min-width: 980px){
 	.menu a {
 		font-size: 17px!important;
@@ -192,11 +212,17 @@ label.screen-reader-text {
 	}
 }
 
+.menu .current-menu-ancestor > a,
 .menu .current_page_item a,
 .menu .current-menu-item a {
     background-color: #613F35;
 	color: #F5B25D!important;
 }
+
+.menu .current-menu-ancestor.menu-item-has-children::after {
+	color: #F5B25D;
+}
+
 
 /* =image slider */
 
