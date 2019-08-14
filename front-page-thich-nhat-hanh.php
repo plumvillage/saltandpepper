@@ -37,25 +37,23 @@ get_header(); ?>
 					<?php the_content( __( 'Read more &#8250;', 'responsive' ) ); ?>
 
 					<div id="widgets" class="home-widgets">
-						<div id="home_widget_1" class="grid col-300">					
+						<div id="home_widget_1" class="grid col-300">
 							<?php if ( is_active_sidebar( 'thich-nhat-hanh-page-1' ) ) : ?>
 								<?php dynamic_sidebar( 'thich-nhat-hanh-page-1' ); ?>
 							<?php endif; ?>
 						</div>
-						<div id="home_widget_2" class="grid col-300">					
+						<div id="home_widget_2" class="grid col-300">
 							<?php if ( is_active_sidebar( 'thich-nhat-hanh-page-2' ) ) : ?>
 								<?php dynamic_sidebar( 'thich-nhat-hanh-page-2' ); ?>
 							<?php endif; ?>
 						</div>
-						<div id="home_widget_3" class="grid col-300 fit">					
+						<div id="home_widget_3" class="grid col-300 fit">
 							<?php if ( is_active_sidebar( 'thich-nhat-hanh-page-3' ) ) : ?>
 								<?php dynamic_sidebar( 'thich-nhat-hanh-page-3' ); ?>
 							<?php endif; ?>
 						</div>
 					</div>
-					
-					<div class="show-share"><?php echo really_simple_share_publish($link='http://plumvillage.org/about/thich-nhat-hanh/', $title='Thich Nhat Hanh'); ?></div>
-					
+
 					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
 				</div>
 				<!-- end of .post-entry -->

@@ -34,9 +34,7 @@ get_header(); ?>
 
 				<div class="post-entry">
 					<?php the_content( __( 'Read more &#8250;', 'responsive' ) ); ?>
-					
-					<div class="show-share"><?php echo really_simple_share_publish($link=get_permalink(), $title=get_the_title()); ?></div>
-					
+
 					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
 				</div>
 				<!-- end of .post-entry -->
